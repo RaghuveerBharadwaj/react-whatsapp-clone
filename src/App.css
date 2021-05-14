@@ -3,4 +3,5 @@
   background: url('./assets/whatsapp.png');
   display: grid;
   place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }

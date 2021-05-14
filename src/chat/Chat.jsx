@@ -1,6 +1,8 @@
 import './Chat.scss'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import moment from 'moment-mini'
+import Logo from '../assets/logo.png'
 
 const Chat = ({ messages, setMessages }) => {
   const userData = JSON.parse(localStorage.getItem("userData"))
@@ -29,7 +31,7 @@ const Chat = ({ messages, setMessages }) => {
       axios
         .post(`${process.env.REACT_APP_BASE_URL}/messages/new`, {
           ...userData,
-          timeStamp: new Date().toLocaleString(),
+          timeStamp: new Date(),
           message: input
         })
         .catch(err => console.error(err))
@@ -40,7 +42,7 @@ const Chat = ({ messages, setMessages }) => {
   return (
     <div className="chat">
       <div className="header">
-        Raghuveer's Chat Room
+        <img src={Logo} alt="Raghuveer Bharadwaj" /> Raghuveer's Chat Room
       </div>
       <div className="chat_body" id="chat_body">
         {messages.map(mess => (
@@ -53,7 +55,7 @@ const Chat = ({ messages, setMessages }) => {
               {mess.message}
             </p>
             <p className="timestamp">
-              {mess.timeStamp}
+              {moment(mess.timeStamp).format("DD MMM YYYY, hh:mm A")}
             </p>
           </div>
         ))}

@@ -1,7 +1,7 @@
 .register {
   max-width: 420px;
   padding: 20px 20px 40px;
-  background-color: darkred;
+  background-color: #075E54;
   border-radius: 8px;
   color: #FFF;
   p {
@@ -22,6 +22,7 @@
     height: auto;
     resize: none;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 
     &:focus {
       border: none;
