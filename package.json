@@ -1,6 +1,8 @@
 {
   "name": "react-whatsapp-clone",
   "version": "0.1.0",
+  "homepage": "https://raghuveerbharadwaj.github.io/react-whatsapp-clone/",
+  "author": "Raghuveer Bharadwaj",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
