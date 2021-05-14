@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0e160800.chunk.css",
+    "main.js": "/static/js/main.f6507eb0.chunk.js",
+    "main.js.map": "/static/js/main.f6507eb0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.050c54a2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.050c54a2.js.map",
+    "static/js/2.e0b3d512.chunk.js": "/static/js/2.e0b3d512.chunk.js",
+    "static/js/2.e0b3d512.chunk.js.map": "/static/js/2.e0b3d512.chunk.js.map",
+    "static/js/3.fe2521f5.chunk.js": "/static/js/3.fe2521f5.chunk.js",
+    "static/js/3.fe2521f5.chunk.js.map": "/static/js/3.fe2521f5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0e160800.chunk.css.map": "/static/css/main.0e160800.chunk.css.map",
+    "static/js/2.e0b3d512.chunk.js.LICENSE.txt": "/static/js/2.e0b3d512.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/whatsapp.f4b196f1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.050c54a2.js",
+    "static/js/2.e0b3d512.chunk.js",
+    "static/css/main.0e160800.chunk.css",
+    "static/js/main.f6507eb0.chunk.js"
+  ]
+}
