@@ -24,6 +24,8 @@ function App() {
 
     const channel = pusher.subscribe('messages')
     channel.bind('inserted', dataInserted)
+    channel.bind('deleted', dataDeleted)
+    channel.bind('updated', dataUpdated)
     return () => {
       channel.unbind()
     }
@@ -40,9 +42,21 @@ function App() {
     }
   }
 
+  const dataDeleted = (id) => setMessages(msgs => _.cloneDeep(msgs).filter(msg => id !== msg._id))
+
+  const dataUpdated = (data) => {
+    setMessages(msgs => _.cloneDeep(msgs).map(msg => {
+      if (data.documentKey._id === msg._id) {
+        msg.message = data.updateDescription.updatedFields.message
+        msg.edited = true
+      }
+      return msg
+    }))
+  }
+
   return (
     <div className="app">
-      {user?.userId ? <Chat 
+      {user?.userId ? <Chat
         messages={messages}
         setMessages={setMessages}
       /> : <Register />}
